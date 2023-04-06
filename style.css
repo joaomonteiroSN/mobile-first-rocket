@@ -170,7 +170,27 @@ span {
         background: var(--h--main);
     }
 
-    .main {
-        display: flex;
+    main {
+        display: grid;
+        /* grid: 22.5rem / auto auto auto; */
+        /* gap: 3.2rem; */
+        grid-template-rows: 15rem 15rem 15rem;
+        grid-template-columns: 22rem 22rem 22rem;
+        /* grid-gap: 3.2rem; */
+
+        padding: 6.4rem 6.8rem;
+    }
+    
+    .card {
+        /* grid-gap: 3.2rem; */
+    }
+
+    img {
+        width: 22rem;
+        height: auto;
+    }
+
+    span {
+        display: none;
     }
 }
