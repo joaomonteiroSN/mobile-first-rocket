@@ -65,7 +65,7 @@ p {
 
     margin: auto;
     margin-top: 1.4rem;
-    margin-bottom: 6.3rem;
+    /* margin-bottom: 6.3rem; */
 
 }
 
@@ -78,10 +78,17 @@ main {
 
 .card {
     position: relative;
+    animation: topdown 700ms;
 }
 
 .img-prod {
     margin: unset;
+    transition-property: transform;
+    transition-duration: 200ms;
+}
+
+.img-prod:hover {
+    transform: scale(1.1);
 }
 
 span {
@@ -103,5 +110,34 @@ span {
     background: var(--box--h2--color);
     font-size: 2rem;
     border-radius: 2rem;
+
+    animation: downtop 700ms;
+
+}
+
+/* animações */
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 
 }
